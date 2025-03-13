@@ -7,11 +7,7 @@
  */
 
 plugins {
-    // Apply the org.jetbrains.kotlin.jvm Plugin to add support for Kotlin.
-    alias(libs.plugins.kotlin.jvm)
-
-    // Apply the java-library plugin for API and implementation separation.
-    `java-library`
+    kotlin("jvm") version "2.1.10"
 }
 
 repositories {
@@ -32,7 +28,7 @@ testing {
         // Configure the built-in test suite
         val test by getting(JvmTestSuite::class) {
             // Use Kotlin Test test framework
-            useKotlinTest("2.1.0")
+            useKotlinTest("2.1.10")
         }
     }
 }
